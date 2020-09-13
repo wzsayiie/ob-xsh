@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+export XSHROOT=$0:a:h
+
+echo "source $XSHROOT/zshrc" > ~/.zshrc

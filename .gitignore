@@ -1,0 +1,5 @@
+# mac os finder cache:
+.DS_Store
+
+# user local configuration:
+local/
