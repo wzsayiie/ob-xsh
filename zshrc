@@ -20,5 +20,6 @@ loadenv $XSHROOT/local/env
 loadenv $XSHROOT/onosx/env
 
 # xsh "path".
+export PATH=$PATH:$XSHROOT/bin
 export PATH=$PATH:$XSHROOT/local/bin
 export PATH=$PATH:$XSHROOT/onosx/bin
