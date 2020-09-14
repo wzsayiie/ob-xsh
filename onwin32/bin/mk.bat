@@ -1,3 +1,5 @@
 @echo off
 
-type nul > %*
+for %%i in (%*) do (
+    type nul > %%i
+)
