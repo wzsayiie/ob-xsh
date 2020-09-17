@@ -20,6 +20,7 @@ set PATH=%PATH%;%XSHROOT%\bin
 set PATH=%PATH%;%XSHROOT%\local\bin
 set PATH=%PATH%;%XSHROOT%\onwin32\bin
 
+cls
 cmd /k
 goto end
 
