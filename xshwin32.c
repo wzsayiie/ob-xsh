@@ -1,19 +1,19 @@
-#include <stdlib.h>
-#include <string.h>
+#include <Windows.h>
 
-//maximum length of single path on windows.
-#define MAX_PATH 260
+int wmain(int nArgc, LPCWSTR *lpArgs)
+{
+    LPCWSTR lpProgram   = *lpArgs;
+    LPCWSTR lpExtension = wcsrchr(lpProgram, L'.');
 
-int main(int argc, const char *argv[]) {
+    WCHAR szBatch[MAX_PATH] = L"";
+    wcscat (szBatch, L"\"");
+    wcsncat(szBatch, lpProgram, lpExtension - lpProgram);
+    wcscat (szBatch, L".bat");
+    wcscat (szBatch, L"\"");
 
-    const char *app = *argv;
-    const char *ext = strrchr(app, '.');
-
-    char bat[MAX_PATH] = "\"";
-    strncat(bat, app, ext - app);
-    strcat(bat, ".bat\"");
-
-    if (system(bat) != 0) {
-        system("pause");
+    int nCode = _wsystem(szBatch);
+    if (nCode != 0)
+    {
+        _wsystem(L"pause");
     }
 }
