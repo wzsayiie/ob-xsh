@@ -96,7 +96,7 @@ def stat(path):
     fdata = filedata()
     fdata.filenum = 1
 
-    with open(path, "r") as file:
+    with open(path, "r", encoding = "utf-8") as file:
         lines = file.readlines()
         for it in lines:
             if notblank(it):
@@ -104,7 +104,7 @@ def stat(path):
             else:
                 fdata.emptyln += 1
 
-        # whether the last line is a blank line.
+        # if a "newline" at the end, then considered there was a blank line.
         if len(lines) > 0 and len(lines[-1]) > 0:
             if lines[-1][-1] == '\n':
                 fdata.emptyln += 1
