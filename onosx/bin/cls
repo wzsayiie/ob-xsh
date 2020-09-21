@@ -1,3 +1,6 @@
-#!/bin/zsh
+#!/usr/bin/osascript
 
-clear
+tell application "System Events"
+    # command+k.
+    key code 40 using command down
+end tell
