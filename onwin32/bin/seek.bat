@@ -1,7 +1,7 @@
 @echo off
 
 ::find files with the specified pattern.
-::usage: seek [pattern] [path1] [path2] ... .
+::usage: seek [pattern] [path1] [path2] ...
 
 if [%1]==[] goto end
 
