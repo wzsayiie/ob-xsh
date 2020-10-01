@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+# remove file to the trash.
+# usage: re [path1] [path2] ...
+
+setup reapi.m reapi.out
+reapi.out $*

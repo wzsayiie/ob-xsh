@@ -6,3 +6,4 @@ local/
 
 # generated files:
 *.exe
+*.out
