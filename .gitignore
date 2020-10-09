@@ -5,6 +5,5 @@
 local/
 
 # generated files:
-*.obj
 *.exe
 *.out

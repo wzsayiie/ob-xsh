@@ -10,7 +10,9 @@ for /f %%i in ('dir /b /o:d %srcfile% %outfile%') do (
     set newer=%%i
 )
 if [%newer%]==[%srcfile%] (
-    cl /nologo /Ox /Fe%outfile% %srcfile% %reflibs%
+    set objfile=%srcfile%.obj
+    cl /nologo /Ox /Fo%objfile% /Fe%outfile% %srcfile% %reflibs%
+    del %objfile%
 )
 
 popd
