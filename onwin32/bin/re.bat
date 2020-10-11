@@ -1,7 +1,7 @@
 @echo off
 
-::remove file to recycle bin.
+::remove files to the recycle bin.
 ::usage: re [path1] [path2] ...
 
-"%~dp0setup" reapi
-"%~dp0reapi" %*
+call "%~dp0setup.bat" reapi.exe reapi.c shell32.lib
+call "%~dp0reapi.exe" %*
