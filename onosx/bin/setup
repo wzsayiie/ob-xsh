@@ -2,8 +2,9 @@
 
 cd `dirname $0`
 
-srcfile=$1
-outfile=$2
+outfile="$1"
+srcfile="$2"
+reflibs="$3 $4 $5 $6"
 
 # if the executable file exists and is newer than the source,
 # then there is no need to compile.
@@ -14,4 +15,4 @@ if [ -f $outfile ]; then
     fi
 fi
 
-clang -framework cocoa $srcfile -o $outfile
+clang -o $outfile $srcfile `echo $reflibs`

@@ -3,5 +3,5 @@
 # remove file to the trash.
 # usage: re [path1] [path2] ...
 
-setup reapi.m reapi.out
-reapi.out $*
+`dirname $0`/setup reapi.out reapi.m -framework Cocoa
+`dirname $0`/reapi.out $*
