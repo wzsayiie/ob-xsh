@@ -12,15 +12,15 @@ cross-platform commands.
 platform-related commands and environments.
 when *xsh* starts, it will load the content under **xx/env/**,
 and add **xx/bin/** to environment variable `PATH`.
-**onosx/** is valid on *mac os*, and **onwin32/** is for *windows*.
+**macos/** is valid on *mac os*, and **windows/** is for *windows*.
 
-- onosx/bin/
-- onosx/env/
-- onwin32/bin/
-- onwin32/env/
+- macos/bin/
+- macos/env/
+- windows/bin/
+- windows/env/
 
 the user local configuration.
-its function is same as **onosx/** and **win32/**,
+its function is same as **macos/** and **win32/**,
 but it isn't added to the repository.
 
 - local/bin/

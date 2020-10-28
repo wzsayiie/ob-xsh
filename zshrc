@@ -17,9 +17,9 @@ loadenv() {
 
 # xsh environment.
 loadenv $XSHROOT/local/env
-loadenv $XSHROOT/onosx/env
+loadenv $XSHROOT/macos/env
 
 # xsh "path".
 export PATH=$PATH:$XSHROOT/bin
 export PATH=$PATH:$XSHROOT/local/bin
-export PATH=$PATH:$XSHROOT/onosx/bin
+export PATH=$PATH:$XSHROOT/macos/bin

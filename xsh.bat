@@ -13,12 +13,12 @@ set PATH=%PATH%;C:\Windows
 
 ::xsh environment.
 set folder=%XSHROOT%\local\env   & call :loadenv
-set folder=%XSHROOT%\onwin32\env & call :loadenv
+set folder=%XSHROOT%\windows\env & call :loadenv
 
 ::xsh "path".
 set PATH=%PATH%;%XSHROOT%\bin
 set PATH=%PATH%;%XSHROOT%\local\bin
-set PATH=%PATH%;%XSHROOT%\onwin32\bin
+set PATH=%PATH%;%XSHROOT%\windows\bin
 
 cls
 cmd /k
