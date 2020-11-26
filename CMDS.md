@@ -19,7 +19,6 @@
 |python |python 3        |   `S`   |  **T**   |
 |re     |remove to trash |    X    |    X     |
 |seek   |seek file       |    X    |    X     |
-|svn    |svn             |   `S`   |  **T**   |
 |code   |open vs code    |  **T**  |  **T**   |
 |wd     |change work path|    X    |    X     |
 |which  |find command    |   `S`   |    X     |
