@@ -1,3 +1,3 @@
 @echo off
 
-python %~dp0days %*
+python "%~dp0days" %*

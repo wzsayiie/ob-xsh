@@ -1,3 +1,3 @@
 @echo off
 
-python %~dp0cline %*
+python "%~dp0cline" %*
