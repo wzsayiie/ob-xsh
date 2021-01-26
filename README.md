@@ -20,18 +20,27 @@ and add **xx/bin/** to environment variable `PATH`.
 - windows/env/
 
 the user local configuration.
-its function is same as **macos/** and **win32/**,
+its function is same as **macos/** and **windows/**,
 but it isn't added to the repository.
 
 - local/bin/
 - local/env/
 
-executable file for *windows*.
+the brief about commands.
 
-- xsh.bat
+- CMDS.md
 
-installation files for *mac os*,
+installation files for *mac os*.
 the script **install** will reset **~/.zshrc**.
 
 - install
 - zshrc
+
+installation files for *windows*.
+**install_xx.bat** will compile **xsh.c** to **xsh.exe**.
+
+- install_cl.bat
+- install_clang.bat
+- install_gcc.bat
+- xsh.bat
+- xsh.c
