@@ -1,33 +1,35 @@
 @echo off
 
+::xsh directory path.
 set XSHROOT=%~dp0
 if %XSHROOT:~-1%==\ (
     ::remove backslash at the end.
     set XSHROOT=%XSHROOT:~0,-1%
 )
 
-::system "path".
+::environment variable "path".
 set PATH=
 set PATH=%PATH%;C:\Windows\System32
 set PATH=%PATH%;C:\Windows
 
-::xsh environment.
-set folder=%XSHROOT%\local\env   & call :loadenv
-set folder=%XSHROOT%\windows\env & call :loadenv
-
-::xsh "path".
 set PATH=%PATH%;%XSHROOT%\bin
-set PATH=%PATH%;%XSHROOT%\local\bin
-set PATH=%PATH%;%XSHROOT%\windows\bin
+set PATH=%PATH%;%XSHROOT%\bin_win
+set PATH=%PATH%;%XSHROOT%\loc_win
 
-cls
-cmd /k
-goto end
+::custom commands.
+doskey cat   = type $*
+doskey ls    = dir /d $*
+doskey mk    = type nul $G $1
+doskey mkd   = mkdir $*
+doskey mv    = move $*
+doskey open  = start "" $*
+doskey wd    = cd /d $1
+doskey which = where $*
 
-:loadenv
-for /r "%folder%" %%f in (*.bat) do (
-    call "%%f"
+::user local configutation.
+if exist %XSHROOT%\loc_win\cfg.bat (
+    call %XSHROOT%\loc_win\cfg.bat
 )
-goto end
 
-:end
+::console configuration.
+prompt $p$s%%$s

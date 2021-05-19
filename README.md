@@ -4,43 +4,39 @@ a simple shell auxiliary tool.
 
 ## files
 
-cross-platform commands.
-*xsh* will add the directory to environment varibale `PATH`:
+the commands directories.
+*xsh* will add the directories to environment varibale `PATH`.
+**bin_mac/** is valid on *mac os*, and **bin_win/** is for *windows*.
 
 - bin/
+- bin_mac/
+- bin_win/
 
-platform-related commands and environments.
-when *xsh* starts, it will load the content under **xx/env/**,
-and add **xx/bin/** to environment variable `PATH`.
-**macos/** is valid on *mac os*, and **windows/** is for *windows*.
+the user commands directories.
+their function is same as **bin_mac/** and **bin_win/**,
+but they are not added to the repository.
 
-- macos/bin/
-- macos/env/
-- windows/bin/
-- windows/env/
+- loc_mac/
+- loc_win/
 
-the user local configuration.
-its function is same as **macos/** and **windows/**,
-but it isn't added to the repository.
+the user local configuration. *xsh* will load then when launching.
 
-- local/bin/
-- local/env/
+- loc_mac/cfg
+- loc_win/cfg.bat
 
-the brief about commands.
+the configuration files for *windows*.
 
-- CMDS.md
+- xsh.bat
 
-installation files for *mac os*.
-the script **install** will reset **~/.zshrc**.
+the configuration files for *mac os*.
 
 - install
 - zshrc
 
-installation files for *windows*.
-**install_xx.bat** will compile **xsh.c** to **xsh.exe**.
+## installation
 
-- install_cl.bat
-- install_clang.bat
-- install_gcc.bat
-- xsh.bat
-- xsh.c
+on *mac os*, execute the script **install**,
+it will reset **~/.zshrc**.
+
+on *windows*, to create a shortcut reference *cmd*,
+and pass **xsh.bat** as its argument, like `cmd.exe /k xsh.bat`.

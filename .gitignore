@@ -1,9 +1,9 @@
-# mac os finder cache:
+# mac os finder cache.
 .DS_Store
 
-# user local configuration:
-local/
+# user local configuration.
+loc_mac/
+loc_win/
 
-# generated files:
-*.exe
-*.out
+# the user shortcut on windows.
+xsh.lnk

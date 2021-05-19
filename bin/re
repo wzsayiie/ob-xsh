@@ -1,0 +1,66 @@
+#!/usr/bin/python3
+#coding:utf-8
+
+# put files in the trash directory.
+# usage: days [file1] [file2] ...
+
+import datetime
+import os
+import platform
+import shutil
+import sys
+
+def trashof(filepath):
+    '''get the trash folder corresponding to the file.'''
+
+    name = ".XshTrash"
+
+    path = None
+    if platform.system() == "Windows":
+        disk = filepath[0:3]
+        path = "{}{}".format(disk, name)
+    else:
+        home = os.path.expanduser("~")
+        path = os.path.join(home, name)
+
+    if not os.path.exists(path):
+        os.mkdir(path)
+
+    return path
+
+def unique(path):
+    '''give the path a unique name about time.'''
+
+    present = datetime.datetime.now()
+    stamp = present.strftime("%Y-%m-%d_%H-%M-%S-%f_")
+
+    dir  = os.path.dirname (path)
+    base = os.path.basename(path)
+
+    newbase = "{}{}".format(stamp, base)
+    newpath = os.path.join(dir, newbase)
+    return newpath
+
+def recycle(curpath):
+    '''rename the file and move it to the trash.'''
+
+    unipath = unique(curpath)
+    os.rename(curpath, unipath)
+
+    trash = trashof(unipath)
+    shutil.move(unipath, trash)
+
+def main(args):
+    if len(args) == 0:
+        print("no files available.")
+        return
+
+    for name in args:
+        path = os.path.abspath(name)
+        if not os.path.exists(path):
+            print("no file: %s" % path)
+        else:
+            recycle(path)
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
