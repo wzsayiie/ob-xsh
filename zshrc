@@ -19,7 +19,7 @@ alias  mk="touch"
 alias mkd="mkdir -p"
 
 # user local configutation.
-if [ -f $XSHROOT/loc_mac/cfg]; then
+if [ -f $XSHROOT/loc_mac/cfg ]; then
     source $XSHROOT/loc_mac/cfg
 fi
 

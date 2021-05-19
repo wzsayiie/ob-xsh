@@ -35,8 +35,7 @@ the configuration files for *mac os*.
 
 ## installation
 
-on *mac os*, execute the script **install**,
-it will reset **~/.zshrc**.
+on *mac os*, execute `./install`, which will reset **~/.zshrc**.
 
 on *windows*, to create a shortcut reference *cmd*,
 and pass **xsh.bat** as its argument, like `cmd.exe /k xsh.bat`.
