@@ -4,6 +4,3 @@
 # user local configuration.
 loc_mac/
 loc_win/
-
-# the user shortcut on windows.
-xsh.lnk
