@@ -7,9 +7,10 @@ export PATH=$PATH:$XSHROOT/bin_mac
 export PATH=$PATH:$XSHROOT/loc_mac
 
 # custom commands.
-alias  wd="cd"
-alias  mk="touch"
-alias mkd="mkdir -p"
+alias   dir="ls"
+alias  move="mv"
+alias  type="cat"
+alias where="which"
 
 # user local configutation.
 if [ -f $XSHROOT/loc_mac/cfg ]; then

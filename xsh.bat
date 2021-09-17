@@ -14,12 +14,11 @@ set PATH=%PATH%;%XSHROOT%\loc_win
 
 ::custom commands.
 doskey cat   = type $*
+doskey cd    = cd /d $1
+doskey clear = cls
 doskey ls    = dir /d $*
-doskey mk    = type nul $G $1
-doskey mkd   = mkdir $*
 doskey mv    = move $*
 doskey open  = start "" $*
-doskey wd    = cd /d $1
 doskey which = where $*
 
 ::user local configutation.
