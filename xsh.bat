@@ -8,10 +8,6 @@ if %XSHROOT:~-1%==\ (
 )
 
 ::environment variable "path".
-set PATH=
-set PATH=%PATH%;C:\Windows\System32
-set PATH=%PATH%;C:\Windows
-
 set PATH=%PATH%;%XSHROOT%\bin
 set PATH=%PATH%;%XSHROOT%\bin_win
 set PATH=%PATH%;%XSHROOT%\loc_win

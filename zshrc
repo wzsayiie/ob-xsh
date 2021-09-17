@@ -2,13 +2,6 @@
 export XSHROOT=$0:a:h
 
 # environment variable "path".
-export PATH=
-export PATH=$PATH:/bin
-export PATH=$PATH:/sbin
-export PATH=$PATH:/usr/bin
-export PATH=$PATH:/usr/local/bin
-export PATH=$PATH:/usr/sbin
-
 export PATH=$PATH:$XSHROOT/bin
 export PATH=$PATH:$XSHROOT/bin_mac
 export PATH=$PATH:$XSHROOT/loc_mac
