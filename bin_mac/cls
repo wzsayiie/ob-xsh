@@ -1,5 +1,8 @@
 #!/usr/bin/osascript
 
+# clear terminal screen.
+# usage: cls
+
 tell application "System Events"
     # command+k.
     key code 40 using command down
