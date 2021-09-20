@@ -15,6 +15,7 @@ def support(path):
         ".c"   , ".h" ,
         ".cpp" , ".cc", ".cxx", ".hh", ".hpp",
         ".mm"  , ".m" ,
+        ".js"  , ".ts",
         ".java", ".cs", ".lua", ".py",
     ]
     for it in suffixes:
