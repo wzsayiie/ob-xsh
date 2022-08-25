@@ -1,3 +1,11 @@
+## OBSOLETED
+
+This respository has been obsoleted, it will not be improved or updated.
+
+on Aug 25, 2022.
+
+---
+
 ## introduction
 
 a simple shell auxiliary tool.
